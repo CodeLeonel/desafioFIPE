@@ -2,7 +2,7 @@ package br.com.alura.desafioFIPE.service;
 
 import java.net.URI;
 
-public class MontadorURI {
+public class MontaURI {
 
 	private final String API_URL = "https://parallelum.com.br/fipe/api/v1";
 	

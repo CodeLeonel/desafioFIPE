@@ -4,6 +4,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import br.com.alura.desafioFIPE.principal.Principal;
+
 @SpringBootApplication
 public class DesafioFipeApplication implements CommandLineRunner {
 
@@ -13,7 +15,11 @@ public class DesafioFipeApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		// TODO Auto-generated method stub
+		
+		Principal principal = new Principal();
+		
+		principal.inicio();
+		
 		
 	}
 
