@@ -1,5 +1,6 @@
 package br.com.alura.desafioFIPE.principal;
 
+import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Scanner;
@@ -98,21 +99,18 @@ public class Principal {
 			
 		}
 		
-		System.out.print("Digite um dos códigos de ano: ");
-		var codigoAno = leitura.nextLine();
-		DadosValor valor = null;
+		List<DadosValor> valores = new ArrayList<>();
 		
 		if(!anos.isEmpty()) {
 			
-			var optAno = anos.stream().filter(a -> a.codigo().equals(codigoAno)).findFirst();
-			
-			if(optAno.isPresent()) {
+			for(var ano : anos) {
 				
-				valor = manipulaAPI.buscaValor(optAno.get());
+				var valor = manipulaAPI.buscaValor(ano);
 				
-				System.out.println(valor);
-				
+				valores.add(valor);			
 			}
+			
+			valores.forEach(System.out::println);
 			
 		}
 		
