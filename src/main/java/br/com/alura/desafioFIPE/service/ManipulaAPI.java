@@ -73,8 +73,7 @@ public class ManipulaAPI {
 		var dadosValor = converte.obterDados(consumoAPI.obterDados(
 				montaUri.getValorURI(veiculo, marca.codigo().toString(),modelo.codigo().toString(),ano.codigo())), 
 				DadosValor.class);
-		
-		this.setValor(dadosValor);
+	
 		
 		return dadosValor;
 		

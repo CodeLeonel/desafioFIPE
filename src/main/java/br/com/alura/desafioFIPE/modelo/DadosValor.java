@@ -1,15 +1,17 @@
 package br.com.alura.desafioFIPE.modelo;
 
+import com.fasterxml.jackson.annotation.JsonAlias;
+
 public record DadosValor(
-		Integer tipoVeiculo,
-		String valor,
-		String marca,
-		String modelo,
-		Integer anoModelo,
-		String combustivel,
-		String cofigoFipe,
-		String mesReferencia,
-		String siglaCombustivel
+		@JsonAlias("TipoVeiculo") Integer tipoVeiculo,
+		@JsonAlias("Valor") String valor,
+		@JsonAlias("Marca") String marca,
+		@JsonAlias("Modelo") String modelo,
+		@JsonAlias("AnoModelo") Integer anoModelo,
+		@JsonAlias("Combustivel") String combustivel,
+		@JsonAlias("CodigoFipe") String cofigoFipe,
+		@JsonAlias("MesReferencia") String mesReferencia,
+		@JsonAlias("SiglaCombustivel") String siglaCombustivel
 		) {
 
 }
